@@ -13,6 +13,7 @@ mod sessions;
 mod sidebar_action;
 mod storage;
 mod tabs;
+mod theme;
 mod windows;
 
 pub use browser_action::*;
@@ -25,6 +26,7 @@ pub use sessions::*;
 pub use sidebar_action::*;
 pub use storage::*;
 pub use tabs::*;
+pub use theme::*;
 pub use windows::*;
 
 pub mod traits {
@@ -64,6 +66,9 @@ extern "C" {
 
     #[wasm_bindgen(method, getter)]
     pub fn tabs(this: &Browser) -> Tabs;
+
+    #[wasm_bindgen(method, getter)]
+    pub fn theme(this: &Browser) -> BrowserTheme;
 
     #[wasm_bindgen(method, getter)]
     pub fn windows(this: &Browser) -> Windows;
