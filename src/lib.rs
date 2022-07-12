@@ -67,6 +67,7 @@ extern "C" {
     #[wasm_bindgen(method, getter)]
     pub fn tabs(this: &Browser) -> Tabs;
 
+    // This is only supported in Firefox
     #[wasm_bindgen(method, getter)]
     pub fn theme(this: &Browser) -> BrowserTheme;
 
